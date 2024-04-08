@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DEMO BUILD</title>    <link href="styles.css" rel="stylesheet">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Cookie">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Monofett">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Grand Hotel">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Comfortaa">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Poppins">
+    <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Raleway">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/gsap.min.js" integrity="sha512-7eHRwcbYkK4d9g/6tD/mhkf++eoTHwpNM9woBxtPUBWm67zeAfFC+HrdoE2GanKeocly/VxeLvIqwvCdk7qScg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
+    </script><script src="logic.js"></script>
+</head>
+<div id="warning">Registration window is currently closed .</div>
+    <div class="navbar">
+        <div class="logo">NOTIFYU</div>
+        <div class="other">
+            <div class="nav-item"><a id='term' href='#win'>SignUp</a></div>
+            <div class="nav-item"><a id='term' href='user.html'>Terms</a></div>
+            <div class="github"><a href="" ><img src="user.jpg"></a></div>
+        </div>
+    </div>
+    <div class="heading">
+        <div class="main-text">Never miss <br>
+                             an update <br>
+                             with  <br>
+                             NotifyU <br>
+        </div>
+        <div class="charac"><img src='charac.png'></div>
+    </div>
+    
+    <div class="info">
+        <div class="wave1">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M321.39,56.44c58-10.79,114.16-30.13,172-41.86,82.39-16.72,168.19-17.73,250.45-.39C823.78,31,906.67,72,985.66,92.83c70.05,18.48,146.53,26.09,214.34,3V0H0V27.35A600.21,600.21,0,0,0,321.39,56.44Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="img-container">
+            <img src="m1.png">
+        </div>
+        <div class="text">
+            NotifyU looks up for latest news from JEC Website so that you don't have to <br/> 😎
+        </div>
+        <div class="wave2">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <span class="masking1"></span>
+    </div>
+
+    <div class="info second">
+        <div class="wave3">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <div class="text sec">
+            Get life saving news & updates at your inbox ! <br/> 🤩
+        </div> 
+        <div class="img-container">
+            <img src="m2.png">
+        </div>
+        <div class="wave4">
+            <svg data-name="Layer 1" xmlns="http://www.w3.org/2000/svg" viewBox="0 0 1200 120" preserveAspectRatio="none">
+                <path d="M985.66,92.83C906.67,72,823.78,31,743.84,14.19c-82.26-17.34-168.06-16.33-250.45.39-57.84,11.73-114,31.07-172,41.86A600.21,600.21,0,0,1,0,27.35V120H1200V95.8C1132.19,118.92,1055.71,111.31,985.66,92.83Z" class="shape-fill"></path>
+            </svg>
+        </div>
+        <span class="masking2"></span>
+    </div>
+
+    </div>
+    <div class="window" id="win">
+        <div class="reg-heading">Register Now!</div>
+        <div class="container" onclick="show()">
+            <form action="#" method="post">
+                <label for="name">Name  </label>
+                <input type="text" name="name" id="name"><br>
+                <label for="contact">Contact  </label>
+                <input type="tel" name="contact" id="contact"><br>
+                <div class="consent">
+                    <input type="checkbox" value="1" id="check" name="check">
+                    <label for="check">I accept the <a href="user.html">Terms and Conditions</a></label>
+                </div>
+                <input type="submit" value="submit" name="submit">
+            </form>
+        </div>
+    </div>
+
+    <div class="footer">
+        <div class="waves waves1"></div>
+        <div class="waves waves2"></div>
+        <div class="boat"><img id="boat-img" src='boat.png'></div>
+        <div class="waves waves3"></div>
+        <div class="waves waves4"></div>
+    </div>
+</html>
+<body>
+
+    
+</body>
+</html>
