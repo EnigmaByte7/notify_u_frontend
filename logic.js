@@ -81,7 +81,7 @@ async function Submit() {
     const name = document.getElementById('name').value;
     const contact = document.getElementById('contact').value;
     const checked = document.getElementById('check').value;
-    if(contact.length() != 10){
+    if(contact.length != 10){
         show('Invalid Contact Number!','warn')
     }
     if(checked != 1){
