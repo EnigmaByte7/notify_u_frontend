@@ -81,11 +81,17 @@ async function Submit() {
     const name = document.getElementById('name').value;
     const contact = document.getElementById('contact').value;
     const checked = document.getElementById('check').checked;
+    if(!contact || !name){
+        show('Please fill the credentials!','warn');
+        return;
+    }
     if(contact.length != 10){
         show('Invalid Contact Number!','warn')
+        return;
     }
     if(checked == false){
         show('Please accept the terms and conditions to continue','warn');
+        return;
     }
     try{
         const response = await fetch('https://notifyu-server.onrender.com/register',{
