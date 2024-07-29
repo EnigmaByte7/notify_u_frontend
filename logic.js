@@ -50,24 +50,42 @@ document.addEventListener('DOMContentLoaded',function() {
     })
 })
 
-function show(message) {
+function show(message, type) {
+    var successElement = document.getElementById('success');
     var warningElement = document.getElementById('warning');
-    warningElement.innerText = message;
-    warningElement.style.display = 'flex';
-    warningElement.style.opacity = 1;
-    
-    setTimeout(function() {
-        warningElement.style.display = 'none';
-        warningElement.style.opacity = 0;
+    if(type === 'warn'){    
+        warningElement.innerText = message;
+        warningElement.style.display = 'flex';
+        warningElement.style.opacity = 1;
 
-    }, 5000);
+        setTimeout(function() {
+            warningElement.style.display = 'none';
+            warningElement.style.opacity = 0;
+
+        }, 5000);
+    }
+    else{
+        successElement.innerText = message;
+        successElement.style.display = 'flex';
+        successElement.style.opacity = 1;
+
+        setTimeout(function() {
+            successElement.style.display = 'none';
+            successElement.style.opacity = 0;
+
+        }, 5000);
+    }
 }
 
 async function Submit() {
     const name = document.getElementById('name').value;
     const contact = document.getElementById('contact').value;
-    if(contact.size() != 10){
-        show('Invalid Contact Number!')
+    const checked = document.getElementById('check').value;
+    if(contact.length() != 10){
+        show('Invalid Contact Number!','warn')
+    }
+    if(checked != 1){
+        show('Please accept the terms and conditions to continue','warn');
     }
     try{
         const response = await fetch('localhost:5000/register',{
@@ -80,8 +98,9 @@ async function Submit() {
         const data = await response.json();
         if(response.ok){
             console.log('Regsitered !');
+            show(data.message,'success');
         }
-        show(data.message);
+        show(data.message,'warn');
     }
     catch(err){
         console.log(err);
