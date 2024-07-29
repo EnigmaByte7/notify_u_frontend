@@ -88,7 +88,7 @@ async function Submit() {
         show('Please accept the terms and conditions to continue','warn');
     }
     try{
-        const response = await fetch('localhost:5000/register',{
+        const response = await fetch('https://notifyu-server.onrender.com//register',{
             method : 'POST',
             headers: {
               'Content-type' : 'application/json',
