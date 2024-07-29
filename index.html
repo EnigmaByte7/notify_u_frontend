@@ -14,7 +14,8 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.5/ScrollTrigger.min.js" integrity="sha512-onMTRKJBKz8M1TnqqDuGBlowlH0ohFzMXYRNebz+yOcc5TQr/zAKsthzhuv0hiyUKEiQEQXEynnXCvNTOk50dg==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
     </script><script src="logic.js"></script>
 </head>
-<div id="warning">Registration window is currently closed .</div>
+<div id="warning"></div>
+<div id="Success"></div>
     <div class="navbar">
         <div class="logo">NOTIFYU</div>
         <div class="other">
@@ -75,8 +76,8 @@
     </div>
     <div class="window" id="win">
         <div class="reg-heading">Register Now!</div>
-        <div class="container" onclick="show()">
-            <form action="#" method="post">
+        <div class="container" >
+            <form  method="post">
                 <label for="name">Name  </label>
                 <input type="text" name="name" id="name"><br>
                 <label for="contact">Contact  </label>
@@ -85,7 +86,7 @@
                     <input type="checkbox" value="1" id="check" name="check">
                     <label for="check">I accept the <a href="user.html">Terms and Conditions</a></label>
                 </div>
-                <input type="submit" value="submit" name="submit">
+                <input type="button" onclick="Submit()" name="submit">
             </form>
         </div>
     </div>

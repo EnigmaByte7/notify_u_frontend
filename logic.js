@@ -50,8 +50,9 @@ document.addEventListener('DOMContentLoaded',function() {
     })
 })
 
-function show() {
+function show(message) {
     var warningElement = document.getElementById('warning');
+    warningElement.innerText = message;
     warningElement.style.display = 'flex';
     warningElement.style.opacity = 1;
     
@@ -60,4 +61,29 @@ function show() {
         warningElement.style.opacity = 0;
 
     }, 5000);
+}
+
+async function Submit() {
+    const name = document.getElementById('name').value;
+    const contact = document.getElementById('contact').value;
+    if(contact.size() != 10){
+        show('Invalid Contact Number!')
+    }
+    try{
+        const response = await fetch('localhost:5000/register',{
+            method : 'POST',
+            headers: {
+              'Content-type' : 'application/json',
+            },
+            body: JSON.stringify({name : name, contact : contact}),
+        });
+        const data = await response.json();
+        if(response.ok){
+            console.log('Regsitered !');
+        }
+        show(data.message);
+    }
+    catch(err){
+        console.log(err);
+    }
 }

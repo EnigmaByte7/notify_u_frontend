@@ -441,6 +441,26 @@ a:visited{
     z-index:999;
 }
 
+#success{
+    background-color: rgba(79, 255, 85, 0.5);
+    color:black;
+    width:90%;
+    padding:20px;
+    margin:auto;
+    height:50px;
+    border: 2px solid rgb(4, 255, 0);
+    border-radius: 15px;
+    font-size:20px;
+    font-family: Poppins;
+    position: fixed;
+    display:none;
+    animation:show 5s linear;
+    justify-content: center;
+    align-items: center;
+    opacity: 0;
+    z-index:999;
+}
+
 @keyframes show {
     0% {opacity: 0;};
     100%{opacity: 1;}
